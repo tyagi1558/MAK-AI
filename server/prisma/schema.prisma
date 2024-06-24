@@ -1,0 +1,83 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model MakData {
+  id                               String  @id @default(auto()) @map("_id") @db.ObjectId
+  agentName                        String
+  agentPhoneNumber                 String
+  dateOfLeadCreated                DateTime
+  leadSource                       String
+  buyerFullName                    String
+  phoneNumber                      String
+  emailID                          String
+  dateOfBirth                      DateTime
+  passportNumber                   String
+  passportExpiry                   DateTime
+  nationality                      String
+  emiratesID                       String
+  emiratesExpiry                   DateTime
+  completeAddress                  String
+  buyerPassport                    String
+  buyerEmiratesID                  String
+  eoiTokenDate                     DateTime
+  dateOfClosure                    DateTime
+  dateOfBooking                    DateTime
+  expectedHandoverDate             DateTime
+  propertyType                     String
+  sizeBuaSqFt                      String
+  noOfBed                          Int
+  developer                        String
+  plotAreaInSqFt                   String
+  plotNumber                       String
+  readyOffplan                     String
+  unitCompleteAddress              String
+  unitPrice                        Float
+  commissionPercent                Float
+  spotCash                         Float
+  grossTotalCommission             Float
+  vat                              Float
+  totalCommissionIncludingVat      Float
+  loyaltyBonus                     Float
+  netTotalCommission               Float
+  uploadedDocuments                String
+  invoiceNumber                    String
+  grossTotalCommissionExternalPayouts Float
+  vat5Percent                      Float
+  loyaltyBonusTotalCommission      Float
+  totalCommissionAed               Float
+  grossAgentPercentCommission      Float
+  agentAedCommission               Float
+  tlPercentCommission              Float
+  tlCommission                     Float
+  smPercentCommission              Float
+  smCommission                     Float
+  bhPercentCommission              Float
+  bhCommission                     Float
+  totalAgentsBhPercentCommission   Float
+  totalCommissionToAgentBhAed      Float
+  percentCommissionToCompany       Float
+  commissionToCompanyAed           Float
+  additionalComments               String
+  commissionStatusToAgent          String
+  amlRemarks                       String
+  contractEndDate                  DateTime
+  noOfCheques                      Int
+  securityDeposits                 Float
+  sourceOfLeads                    String
+  taFullCommission                 Float
+  firstClaim                       Float
+  secondClaim                      Float
+  thirdClaim                       Float
+  commissionStatus                 String
+  dewaPremises                     String
+  contractNumber                   String
+  titleDeedNumber                  String
+  newTitleDeedNumber               String
+  externalAgent                    String
+}
